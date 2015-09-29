@@ -2,7 +2,7 @@
     "name": "intothesource/users",
     "description": "User manager with roles (single and multiple)",
     "keywords": ["user manager", "user managersystem", "user manager and roles", "the source", "thesource", "in to the source", "intothesource"],
-    "homepage": "https://github.com/IntoTheSource/Users",
+    "homepage": "https://github.com/intothesource/users",
     "license": "MIT",
     "authors": [
         {
@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "IntoTheSource\\Users\\": "src"
+            "intothesource\\users\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IntoTheSource\\Users\\Test\\": "tests"
+            "intothesource\\users\\Test\\": "tests"
         }
     },
     "scripts": {

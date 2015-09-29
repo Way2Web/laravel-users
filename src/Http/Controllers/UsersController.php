@@ -1,6 +1,6 @@
 <?php
 
-namespace IntoTheSource\Users\Http\Controllers;
+namespace intothesource\users\Http\Controllers;
 
 use App\User;
 use App\Role;
