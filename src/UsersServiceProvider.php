@@ -1,6 +1,6 @@
 <?php
 
-namespace intothesource\users;
+namespace IntoTheSource\Users;
 
 /**
  *

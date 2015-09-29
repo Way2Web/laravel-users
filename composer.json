@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "intothesource\\users\\": "src"
+            "IntoTheSource\\Users\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "intothesource\\users\\Test\\": "tests"
+            "IntoTheSource\\Users\\Test\\": "tests"
         }
     },
     "scripts": {
