@@ -1,0 +1,12 @@
+.check-password {
+    display: none;
+    padding: 5px 0px 0px;
+}
+.check-password.success {
+    display: block;
+    color: green;
+}
+.check-password.error {
+    display: block;
+    color: red;
+}
