@@ -85,7 +85,7 @@
     </table>
     <hr>
 @endif
-@if(!$user->count() && !$deletedUsers->count())
+@if(!$users->count() && !$deletedUsers->count())
     <p>No users found.</p>
 @endif
 
