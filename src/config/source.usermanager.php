@@ -5,5 +5,5 @@
         /**
          * Multiple roles per user
          */
-        'multiple' => false;
+        'multiple' => false,
 	];
