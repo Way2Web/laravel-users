@@ -38,4 +38,7 @@ php artisan vendor:publish
 
 #### Migration
 
-Run the command: 'php artisan migrate'
+Run the command: 
+```bash
+php artisan migrate
+```
