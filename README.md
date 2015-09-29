@@ -2,7 +2,9 @@
 User manager with roles (single and multiple)
 
 ## Install
-'composer require intothesource/users'
+```bash
+composer require intothesource/users
+```
 
 ## After install
 
