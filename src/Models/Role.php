@@ -3,11 +3,9 @@
 namespace IntoTheSource\Users\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Role extends Model
 {
-    use SoftDeletes;
 
     /**
      * The database table used by the model.
