@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Source\Users\src\Models\Role as UserManagerRole;
+use IntoTheSource\Users\Models\Role as UserManagerRole;
 
 class Role extends UserManagerRole
 {

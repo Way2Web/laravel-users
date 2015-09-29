@@ -1,15 +1,7 @@
 {
-    "name": "Source/Users",
+    "name": "IntoTheSource/Users",
     "description": "User manager with roles (single and multiple)",
-    "keywords": [
-        "user manager",
-        "user managersystem",
-        "user manager and roles",
-        "the source",
-        "thesource",
-        "in to the source",
-        "intothesource",
-    ],
+    "keywords": ["user manager", "user managersystem", "user manager and roles", "the source", "thesource", "in to the source", "intothesource"],
     "homepage": "https://github.com/thephpSource/Users",
     "license": "MIT",
     "authors": [
@@ -21,6 +13,7 @@
         }
     ],
     "require": {
+        "illuminate/html": "^5.0",
         "illuminate/support": "~5.1",
         "php" : ">=5.3.0"
     },
@@ -30,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Source\\Users\\": "src"
+            "IntoTheSource\\Users\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Source\\Users\\Test\\": "tests"
+            "IntoTheSource\\Users\\Test\\": "tests"
         }
     },
     "scripts": {

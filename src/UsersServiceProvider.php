@@ -1,9 +1,9 @@
 <?php
 
-namespace Source\Users;
+namespace IntoTheSource\Users;
 
 /**
- * 
+ *
  * @author Gertjan Roke <gjroke@intothesource.com>
  */
 
@@ -68,7 +68,7 @@ class UsersServiceProvider extends ServiceProvider
 	 */
 	public function setupRoutes(Router $router)
 	{
-		$router->group(['namespace' => 'Source\Users\Http\Controllers'], function($router)
+		$router->group(['namespace' => 'IntoTheSource\Users\Http\Controllers'], function($router)
 		{
 			require __DIR__.'/Http/routes.php';
 		});

@@ -1,6 +1,6 @@
 <?php
 
-namespace Source\Users\src\Models;
+namespace IntoTheSource\Users\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Role extends Model
 {
     use SoftDeletes;
-    
+
     /**
      * The database table used by the model.
      *
@@ -22,7 +22,7 @@ class Role extends Model
      * @var array
      */
     protected $fillable = ['name'];
-    
+
     /**
      * Get all the users associated with the given role
      *

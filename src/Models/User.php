@@ -1,6 +1,6 @@
 <?php
 
-namespace Source\Users\src\Models;
+namespace IntoTheSource\Users\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -42,7 +42,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $dates = ['deleted_at'];
-    
+
     /**
      * Get all the roles that belong to this user
      *

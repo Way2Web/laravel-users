@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Source\Users\src\Models\User as UserManagerUser;
+use IntoTheSource\Users\Models\User as UserManagerUser;
 
 class User extends UserManagerUser
 {
