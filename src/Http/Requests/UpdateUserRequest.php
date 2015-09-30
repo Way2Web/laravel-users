@@ -25,7 +25,7 @@ class UpdateUserRequest extends Request
     public function rules()
     {
         $id = $this->segments()[1];
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         if(!$this->get('password'))
         {
             return [
