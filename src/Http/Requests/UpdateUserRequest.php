@@ -24,7 +24,8 @@ class UpdateUserRequest extends Request
      */
     public function rules()
     {
-        $user = User::where('email','=',$this->get('email'))->first();
+        $id = $this->segments()[1];
+        $user = User::find($id);
         if(!$this->get('password'))
         {
             return [
