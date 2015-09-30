@@ -20,14 +20,10 @@
                     <td>{{ $role->id }}</td>
                     <td>{{ $role->name }}</td>
                     <td>
-                        <div class="col-md-1">
-                            <a class="btn btn-info btn-sm" href="{{ route('role.manager.edit', $role->id) }}">Edit</a>
-                        </div>
-                        <div class="col-md-1">
-                            {!! Form::open(['route' => ['role.manager.destroy', $role->id], 'method' => 'DELETE']) !!}
-                                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
-                            {!! Form::close() !!}
-                        </div>
+                        <a class="btn btn-info btn-sm" href="{{ route('role.manager.edit', $role->id) }}">Edit</a>
+                        {!! Form::open(['route' => ['role.manager.destroy', $role->id], 'method' => 'DELETE']) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                        {!! Form::close() !!}
                     </td>
                 </tr>
                 @endforeach

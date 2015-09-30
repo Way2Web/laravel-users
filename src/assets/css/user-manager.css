@@ -2,11 +2,32 @@
     display: none;
     padding: 5px 0px 0px;
 }
-.check-password.success {
-    display: block;
-    color: green;
+    .check-password.success {
+        display: block;
+        color: green;
+    }
+    .check-password.error {
+        display: block;
+        color: red;
+    }
+
+.table .btn {
+    margin-right: 5px;
+    float: left;
 }
-.check-password.error {
-    display: block;
-    color: red;
+
+.deleted-users {
+    color: dimgrey;
 }
+    table.deleted-users {
+        background-color: lightgray;
+    }
+        .table.deleted-users > thead > tr > th {
+            border-color: darkgrey;
+        }
+        .table.deleted-users > tbody > tr > td {
+            border-color: silver;
+        }
+        table.deleted-users .btn {
+            opacity: 0.8;
+        }
