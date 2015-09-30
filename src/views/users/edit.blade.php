@@ -50,17 +50,21 @@
             {!! Form::label('role', 'Role') !!}
             <select name="role" id="role" class="form-control">
                 <option value="">---- Select a Role ----</option>
-                <optgroup label="All the available roles">
                 @if($roles->count())
+                <optgroup label="All the available roles">
                     @foreach($roles as $id => $role)
-                        @if($id == $user->roles()->first()->id)
-                            <option value="{{ $id }}" selected>{{ $role }}</option>
+                        @if($user->roles()->count())
+                            @if($id == $user->roles()->first()->id)
+                                <option value="{{ $id }}" selected>{{ $role }}</option>
+                            @else
+                                <option value="{{ $id }}">{{ $role }}</option>
+                            @endif
                         @else
                             <option value="{{ $id }}">{{ $role }}</option>
                         @endif
                     @endforeach
-                @endif
                 </optgroup>
+                @endif
             </select>
         @endif
         </div>

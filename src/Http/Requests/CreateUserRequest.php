@@ -13,9 +13,6 @@ class CreateUserRequest extends Request
      */
     public function authorize()
     {
-        if(\Auth::user()->role == 'admin' OR \Auth::user()->id == $this->user()){
-            return true;
-        }
         return true;
     }
 
@@ -30,7 +27,7 @@ class CreateUserRequest extends Request
             'name'      => 'max:255',
             'email'     => 'required|email|max:255|unique:users,email',
             'role'      => 'required',
-            'password'  => 'required|password_confirmation|min:10|max:255',
+            'password'  => 'required|confirmed|min:10|max:255',
         ];
     }
 }

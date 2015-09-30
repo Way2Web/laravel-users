@@ -48,11 +48,7 @@
                 <optgroup label="All the available roles">
                 @if($roles->count())
                     @foreach($roles as $id => $role)
-                        @if($id == $user->roles()->first()->id)
-                            <option value="{{ $id }}" selected>{{ $role }}</option>
-                        @else
-                            <option value="{{ $id }}">{{ $role }}</option>
-                        @endif
+                        <option value="{{ $id }}">{{ $role }}</option>
                     @endforeach
                 @endif
                 </optgroup>
