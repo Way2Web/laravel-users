@@ -39,9 +39,7 @@ class UsersServiceProvider extends ServiceProvider
          * Add all the request files
          */
         $this->publishes([
-            __DIR__.'/Http/Requests/CreateUserRequest.php' => app_path('/Http/Requests/CreateUserRequest.php'),
-            __DIR__.'/Http/Requests/UpdateUserRequest.php' => app_path('/Http/Requests/UpdateUserRequest.php'),
-            __DIR__.'/Http/Requests/RolesRequest.php' => app_path('/Http/Requests/RolesRequest.php')
+            __DIR__.'/Http/Requests' => app_path('/Http/Requests')
         ], 'requests');
         /**
          * Add all the style and script files
@@ -54,9 +52,7 @@ class UsersServiceProvider extends ServiceProvider
          * Add all the migrations
          */
         $this->publishes([
-            __DIR__.'/database/migrations/2014_10_12_000000_create_users_table.php' => database_path('migrations/2014_11_12_000000_add_deleted_at_to_users_table.php'),
-            __DIR__.'/database/migrations/2015_09_18_072648_create_roles_table.php' => database_path('migrations/2015_09_18_072648_create_roles_table.php'),
-            __DIR__.'/database/migrations/2015_09_18_072902_create_role_user_table.php' => database_path('migrations/2015_09_18_072902_create_role_user_table.php')
+            __DIR__.'/database/migrations' => database_path('migrations')
         ], 'migrations');
         }
 	/**
