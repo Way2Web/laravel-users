@@ -28,7 +28,6 @@ And at "aliases":
 #### Creating the files
 First remove the following files:
 - the 'User.php' file from 'App/' folder
-- the user table migration from 'database/migrations/' => '2014_10_12_000000_create_users_table.php'
 
 After you removed all the files, that run the following command:
 
