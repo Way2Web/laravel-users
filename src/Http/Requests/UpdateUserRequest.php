@@ -5,6 +5,11 @@ namespace App\Http\Requests;
 use App\User;
 use App\Http\Requests\Request;
 
+/**
+ * Update user request
+ * @package users
+ * @author Gertjan Roke <groke@intothesource.com>
+ */
 class UpdateUserRequest extends Request
 {
     /**
