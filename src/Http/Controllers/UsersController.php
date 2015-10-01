@@ -9,6 +9,11 @@ use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\updateUserRequest;
 use Illuminate\Http\Request;
 
+/**
+ * Users controller
+ * @package users
+ * @author Gertjan Roke <groke@intothesource.com>
+ */
 class UsersController extends Controller
 {
     /**
