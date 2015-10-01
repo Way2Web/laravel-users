@@ -30,14 +30,8 @@
                 {!! Form::label('role', 'Roles') !!}
                 <br>
                 @foreach($roles as $id => $role)
-                    <?php $checked = '' ?>
-                    @foreach($user->roles as $usedRole)
-                        @if($id == $usedRole->id)
-                            <?php $checked = 'checked' ?>
-                        @endif
-                    @endforeach
                     <label class="checkbox-inline">
-                        <input type="checkbox" id="role{{$id}}" name="role[]" value="{{ $id }}" {{ $checked }}> {{ $role }}
+                        <input type="checkbox" id="role{{$id}}" name="role[]" value="{{ $id }}"> {{ $role }}
                     </label>
                 @endforeach
             @endif
