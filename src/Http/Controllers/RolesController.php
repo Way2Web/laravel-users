@@ -7,6 +7,11 @@ use App\Http\Requests\RolesRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+/**
+ * Roles Controller
+ * @package users
+ * @author Gertjan Roke <groke@intothesource.com>
+ */
 class RolesController extends Controller
 {
     /**
@@ -16,7 +21,7 @@ class RolesController extends Controller
      */
     public function index()
     {
-//        return '<h1>inportant!</h1> Add: "packages/Source/Users/src/Models" to "classmap" and "packages/Source/Users/src/Http/Requests" in the composer.json file in your main folder!<br>Without this the model connection would not work.<br>Do not forget to execute the composer command: "composer dump-autoload" and remove this line from the controller.';
+    // return '<h1>inportant!</h1> Add: "packages/Source/Users/src/Models" to "classmap" and "packages/Source/Users/src/Http/Requests" in the composer.json file in your main folder!<br>Without this the model connection would not work.<br>Do not forget to execute the composer command: "composer dump-autoload" and remove this line from the controller.';
         $roles = Role::all();
         return view('UMViews::roles.index', compact('roles'));
     }
