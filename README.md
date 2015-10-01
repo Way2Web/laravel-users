@@ -6,6 +6,8 @@ User manager with roles (single and multiple)
 composer require intothesource/users
 ```
 
+This package also uses the [Entrance package](https://github.com/intothesource/entrance), for more information about that package go to that repositorie.
+
 ## After install
 
 #### ServiceProvider

@@ -27,7 +27,6 @@ class UsersServiceProvider extends ServiceProvider
          * Add all the Models
          */
         $this->publishes([
-            __DIR__.'/Models/app/User.php' => app_path('User.php'),
             __DIR__.'/Models/app/Role.php' => app_path('Role.php')
         ], 'models');
         /**
@@ -55,7 +54,7 @@ class UsersServiceProvider extends ServiceProvider
          * Add all the migrations
          */
         $this->publishes([
-            __DIR__.'/database/migrations/2014_10_12_000000_create_users_table.php' => database_path('migrations/2014_10_12_000000_create_users_table.php'),
+            __DIR__.'/database/migrations/2014_10_12_000000_create_users_table.php' => database_path('migrations/2014_11_12_000000_add_deleted_at_to_users_table.php'),
             __DIR__.'/database/migrations/2015_09_18_072648_create_roles_table.php' => database_path('migrations/2015_09_18_072648_create_roles_table.php'),
             __DIR__.'/database/migrations/2015_09_18_072902_create_role_user_table.php' => database_path('migrations/2015_09_18_072902_create_role_user_table.php')
         ], 'migrations');
