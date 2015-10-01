@@ -32,6 +32,7 @@ class CreateRoleUserTable extends Migration
     public function down()
     {
         $table->dropForeign('role_user_role_id_foreign');
+        $table->dropForeign('role_user_user_id_foreign');
         Schema::drop('role_user');
     }
 }
