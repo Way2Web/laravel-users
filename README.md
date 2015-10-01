@@ -28,10 +28,7 @@ And at "aliases":
 ```
 
 #### Creating the files
-First remove the following files:
-- the 'User.php' file from 'App/' folder
-
-After you removed all the files, that run the following command:
+Run the following command:
 
 ```bash
 php artisan vendor:publish
