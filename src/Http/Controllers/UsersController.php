@@ -23,8 +23,6 @@ class UsersController extends Controller
      */
     public function index()
     {
-//        return '<h1>inportant!</h1> Add: "packages/Source/Users/src/Models" to "classmap" and "packages/Source/Users/src/Http/Requests" in the composer.json file in your main folder!<br>Without this the model connection would not work.<br>Do not forget to execute the composer command: "composer dump-autoload" and remove this line from the controller.';
-
         $users = User::all();
         $deletedUsers = User::onlyTrashed()->get();
         return view('UMViews::users.index', compact('users', 'deletedUsers'));

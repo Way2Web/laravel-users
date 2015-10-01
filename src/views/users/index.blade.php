@@ -60,22 +60,22 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($deletedUsers as $user)
+            @foreach($deletedUsers as $deleted_user)
             <tr>
-                <td>{{ $user->id }}</td>
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->email }}</td>
+                <td>{{ $deleted_user->id }}</td>
+                <td>{{ $deleted_user->name }}</td>
+                <td>{{ $deleted_user->email }}</td>
                 <td>
-                    @foreach($user->roles as $role)
+                    @foreach($deleted_user->roles as $role)
                         {{ $role->name }} 
                     @endforeach
                 </td>
                 <td>
-                    {!! Form::open(['route' => ['user.manager.restore', $user->id]]) !!}
+                    {!! Form::open(['route' => ['user.manager.restore', $deleted_user->id]]) !!}
                         {!! Form::submit('Restore', ['class' => 'btn btn-warning btn-sm pull-left']) !!}
                     {!! Form::close() !!}
 
-                    {!! Form::open(['route' => ['user.manager.permanentlyDestroy', $user->id], 'method' => 'DELETE']) !!}
+                    {!! Form::open(['route' => ['user.manager.permanentlyDestroy', $deleted_user->id], 'method' => 'DELETE']) !!}
                         {!! Form::submit('Delete permanently', ['class' => 'btn btn-danger btn-sm pull-left']) !!}
                     {!! Form::close() !!}
                 </td>
