@@ -29,7 +29,7 @@ class UpdateUserRequest extends Request
      */
     public function rules()
     {
-        $id = $this->segments()[1];
+        $id = $this->route()->users;
         $user = User::findOrFail($id);
         if(!$this->get('password'))
         {

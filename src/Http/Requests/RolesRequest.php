@@ -40,8 +40,8 @@ class RolesRequest extends Request
             case 'PUT':
             case 'PATCH':
             {
-                $param = $this->segments()[1];
-                $role = Role::findOrFail($param);
+                $id = $this->route()->roles;
+                $role = Role::findOrFail($id);
                 return [
                     'name' => 'required|min:3|max:255|unique:roles,name,'.$role->id,
                 ];

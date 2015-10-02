@@ -41,6 +41,16 @@ Run the command:
 php artisan migrate
 ```
 
+#### Middleware
+
+Add the following line to the '$routeMiddleware' array in the file 'App/Http/Kernel.php'
+
+```bash
+'admin' => \IntoTheSource\Users\Http\Middleware\IfAdmin::class,
+```
+
+If you go to the user index you first need a role that sign in the [config file](https://github.com/intothesource/users/blob/master/src/config/intothesource.usermanager.php) at 'Middleware'
+
 #### Database Seed
 
 If you want to at basic roles, do the following thinks.<br>
