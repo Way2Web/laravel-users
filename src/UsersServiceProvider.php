@@ -63,7 +63,7 @@ class UsersServiceProvider extends ServiceProvider
          * Add all the database seeds
          */
         $this->publishes([
-            __DIR__.'/database/seeds' => database_path('migrations')
+            __DIR__.'/database/seeds' => database_path('seeds')
         ], 'seeds');
         /**
          * Add all the controllers
