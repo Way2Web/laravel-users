@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => config('intothesource.usermanager.prefix')], function() {
+Route::group(['prefix' => config('intothesource.usermanager.prefix'), 'middleware' => config('intothesource.usermanager.middleware')], function() {
     /**
      * All the routes for the users
      */
