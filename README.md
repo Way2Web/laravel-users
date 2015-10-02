@@ -40,3 +40,18 @@ Run the command:
 ```bash
 php artisan migrate
 ```
+
+#### Database Seed
+
+If you want to at basic roles do the following thinks.
+
+Add to your 'DatabseSeeder.php' file in the 'database/seeds' folder
+```bash
+$this->call(RoleTableSeeder::class);
+$this->call(RoleUserTableSeeder::class);
+```
+
+After that run the next command:
+```bash
+php artisan db:seed
+```
