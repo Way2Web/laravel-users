@@ -43,7 +43,7 @@ php artisan migrate
 
 #### Database Seed
 
-If you want to at basic roles do the following thinks.
+If you want to at basic roles, do the following thinks.
 
 Add to your 'DatabseSeeder.php' file in the 'database/seeds' folder
 ```bash
