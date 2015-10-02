@@ -44,14 +44,21 @@ php artisan migrate
 #### Database Seed
 
 If you want to at basic roles, do the following thinks.
+@note: if you want to use this be sure that you also included the database seeding of the [Entrance package](https://github.com/intothesource/entrance)
 
 Add to your 'DatabaseSeeder.php' file in the 'database/seeds' folder
 ```bash
 $this->call(RoleTableSeeder::class);
 $this->call(RoleUserTableSeeder::class);
 ```
-
 After that run the next command:
 ```bash
 php artisan db:seed
+```
+
+###### Or
+if you dont want to do that run the following commands:
+```bash
+first: php artisan db:seed --class=RoleTableSeeder
+second: php artisan db:seed --class=RoleUserTableSeeder
 ```
