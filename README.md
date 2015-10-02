@@ -45,7 +45,7 @@ php artisan migrate
 
 If you want to at basic roles, do the following thinks.
 
-Add to your 'DatabseSeeder.php' file in the 'database/seeds' folder
+Add to your 'DatabaseSeeder.php' file in the 'database/seeds' folder
 ```bash
 $this->call(RoleTableSeeder::class);
 $this->call(RoleUserTableSeeder::class);
