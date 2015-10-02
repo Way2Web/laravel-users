@@ -1,6 +1,6 @@
 <?php
 
-namespace IntoTheSource\Users\Http\Controllers;
+namespace App\Http\Controllers\IntoTheSource\Users;
 
 use App\Role;
 use App\Http\Requests\RolesRequest;
@@ -21,9 +21,8 @@ class RolesController extends Controller
      */
     public function index()
     {
-    // return '<h1>inportant!</h1> Add: "packages/Source/Users/src/Models" to "classmap" and "packages/Source/Users/src/Http/Requests" in the composer.json file in your main folder!<br>Without this the model connection would not work.<br>Do not forget to execute the composer command: "composer dump-autoload" and remove this line from the controller.';
         $roles = Role::all();
-        return view('UMViews::roles.index', compact('roles'));
+        return view('roles.index', compact('roles'));
     }
 
     /**
@@ -33,7 +32,7 @@ class RolesController extends Controller
      */
     public function create()
     {
-        return view('UMViews::roles.create');
+        return view('roles.create');
     }
 
     /**
@@ -69,7 +68,7 @@ class RolesController extends Controller
     public function edit($id)
     {
         $role = Role::findOrFail($id);
-        return view('UMViews::roles.edit', compact('role'));
+        return view('roles.edit', compact('role'));
     }
 
     /**

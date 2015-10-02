@@ -6,4 +6,10 @@
          * Multiple roles per user
          */
         'multiple' => false,
+        /**
+         * Prefix your url
+         *
+         * @note add a '/' at the end of the prefix
+         */
+        'prefix' => '/',
 	];

@@ -1,8 +1,8 @@
 <?php
 
-namespace IntoTheSource\Users\Http\Controllers;
+namespace App\Http\Controllers\IntoTheSource\Users;
 
-use App\User;
+use App\UserManager as User;
 use App\Role;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest;
@@ -25,7 +25,7 @@ class UsersController extends Controller
     {
         $users = User::all();
         $deletedUsers = User::onlyTrashed()->get();
-        return view('UMViews::users.index', compact('users', 'deletedUsers'));
+        return view('users.index', compact('users', 'deletedUsers'));
     }
 
     /**
@@ -36,7 +36,7 @@ class UsersController extends Controller
     public function create()
     {
         $roles = Role::lists('name', 'id');
-        return view('UMViews::users.create', compact('roles'));
+        return view('users.create', compact('roles'));
     }
 
     /**
@@ -65,7 +65,7 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
         $roles = Role::lists('name', 'id');
-        return view('UMViews::users.edit', compact('user', 'roles'));
+        return view('users.edit', compact('user', 'roles'));
     }
 
     /**

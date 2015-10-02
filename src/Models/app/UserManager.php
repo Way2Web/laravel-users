@@ -1,11 +1,11 @@
 <?php
 
-namespace IntoTheSource\Users\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\User as DefaultUserModel;
 
-class User extends DefaultUserModel
+class UserManager extends DefaultUserModel
 {
     use SoftDeletes;
 

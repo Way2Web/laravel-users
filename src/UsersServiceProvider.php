@@ -3,7 +3,7 @@
 namespace IntoTheSource\Users;
 
 /**
- *
+ * 
  * @author Gertjan Roke <gjroke@intothesource.com>
  */
 
@@ -21,13 +21,12 @@ class UsersServiceProvider extends ServiceProvider
 
 	public function boot()
 	{
-		$this->loadViewsFrom(realpath(__DIR__.'/views'), 'UMViews');
 		$this->setupRoutes($this->app->router);
 		/**
          * Add all the Models
          */
         $this->publishes([
-            __DIR__.'/Models/app/Role.php' => app_path('Role.php')
+            __DIR__.'/Models/app' => app_path()
         ], 'models');
         /**
          * Add all the config files
@@ -42,11 +41,17 @@ class UsersServiceProvider extends ServiceProvider
             __DIR__.'/Http/Requests' => app_path('/Http/Requests')
         ], 'requests');
         /**
+         * Add all the view files
+         */
+        $this->publishes([
+            __DIR__.'/views' => base_path('/resources/views/intothesource/usersmanager')
+        ], 'requests');
+        /**
          * Add all the style and script files
          */
         $this->publishes([
-            __DIR__.'/assets/css/user-manager.css' => public_path('/assets/css/user-manager.css'),
-            __DIR__.'/assets/js/user-manager.js' => public_path('/assets/js/user-manager.js')
+            __DIR__.'/assets/css' => public_path('/assets/css'),
+            __DIR__.'/assets/js' => public_path('/assets/js')
         ], 'styles and scripts');
         /**
          * Add all the migrations
@@ -54,7 +59,13 @@ class UsersServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/database/migrations' => database_path('migrations')
         ], 'migrations');
-        }
+        /**
+         * Add all the controllers
+         */
+        $this->publishes([
+            __DIR__.'/Http/Controllers' => app_path('/Http/Controllers/Intothesource/Users')
+        ], 'controllers');
+    }
 	/**
 	 * Define the routes for the application.
 	 *
@@ -63,7 +74,7 @@ class UsersServiceProvider extends ServiceProvider
 	 */
 	public function setupRoutes(Router $router)
 	{
-		$router->group(['namespace' => 'IntoTheSource\Users\Http\Controllers'], function($router)
+		$router->group(['namespace' => 'App\Http\Controllers\IntoTheSource\Users'], function($router)
 		{
 			require __DIR__.'/Http/routes.php';
 		});
