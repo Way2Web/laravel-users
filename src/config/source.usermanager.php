@@ -7,7 +7,7 @@
          */
         'multiple' => false,
         /**
-         * Prefix your url
+         * Prefix your url (The route would look something like this 'cms/users')
          *
          * @note add a '/' at the end of the prefix
          */
