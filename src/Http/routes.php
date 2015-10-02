@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => config('source.usermanager.prefix')], function() {
+Route::group(['prefix' => config('intothesource.usermanager.prefix')], function() {
     /**
      * All the routes for the users
      */

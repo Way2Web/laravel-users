@@ -25,7 +25,7 @@
             <span class="check-password"></span>
         </div>
         <div class="form-group">
-        @if (config('source.usermanager.multiple'))
+        @if (config('intothesource.usermanager.multiple'))
            @if($roles->count())
                 {!! Form::label('role', 'Roles') !!}
                 <br>

@@ -32,7 +32,7 @@ class UsersServiceProvider extends ServiceProvider
          * Add all the config files
          */
         $this->publishes([
-            __DIR__.'/config/source.usermanager.php' => config_path('source.usermanager.php')
+            __DIR__.'/config' => config_path()
         ], 'config');
         /**
          * Add all the request files
@@ -59,6 +59,12 @@ class UsersServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/database/migrations' => database_path('migrations')
         ], 'migrations');
+        /**
+         * Add all the database seeds
+         */
+        $this->publishes([
+            __DIR__.'/database/seeds' => database_path('migrations')
+        ], 'seeds');
         /**
          * Add all the controllers
          */

@@ -12,4 +12,8 @@
          * @note add a '/' at the end of the prefix
          */
         'prefix' => '/',
+        /**
+         * Add all the roles that have access to the users table and role table
+         */
+        'middleware' => ['admin'],
 	];
