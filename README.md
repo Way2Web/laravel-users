@@ -43,7 +43,7 @@ php artisan migrate
 
 #### Database Seed
 
-If you want to at basic roles, do the following thinks.
+If you want to at basic roles, do the following thinks.<br>
 @note: if you want to use this be sure that you also included the database seeding of the [Entrance package](https://github.com/intothesource/entrance)
 
 Add to your 'DatabaseSeeder.php' file in the 'database/seeds' folder
