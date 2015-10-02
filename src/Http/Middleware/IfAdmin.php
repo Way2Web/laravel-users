@@ -20,6 +20,6 @@ class IfAdmin
             return $next($request);
         }
         $request->session()->flash('message', 'U heeft niet de juiste rechten om de gezochte pagina te bekijken.');
-        return \Redirect::to('entrance');
+        return \Redirect::route('login.index');
     }
 }
