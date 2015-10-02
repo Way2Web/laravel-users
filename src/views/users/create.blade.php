@@ -1,11 +1,11 @@
-@extends('UMViews::default')
+@extends('intothesource.usersmanager.default')
 
 
 @section('content')
     <h1>Create User</h1>
     <a href="{{ route('user.manager.index') }}" class="btn btn-danger">Back</a>
     <hr>
-    @include('UMViews::errors')
+    @include('intothesource.usersmanager.errors')
     {!! Form::open(['route' => 'user.manager.store', 'class' => 'form']) !!}
         <div class="form-group">
             {!! Form::label('name', 'Name') !!}

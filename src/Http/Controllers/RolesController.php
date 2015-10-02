@@ -22,7 +22,7 @@ class RolesController extends Controller
     public function index()
     {
         $roles = Role::all();
-        return view('roles.index', compact('roles'));
+        return view('intothesource.usersmanager.roles.index', compact('roles'));
     }
 
     /**
@@ -32,7 +32,7 @@ class RolesController extends Controller
      */
     public function create()
     {
-        return view('roles.create');
+        return view('intothesource.usersmanager.roles.create');
     }
 
     /**
@@ -68,7 +68,7 @@ class RolesController extends Controller
     public function edit($id)
     {
         $role = Role::findOrFail($id);
-        return view('roles.edit', compact('role'));
+        return view('intothesource.usersmanager.roles.edit', compact('role'));
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends('UMViews::default')
+@extends('intothesource.usersmanager.default')
 
 
 @section('content')

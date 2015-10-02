@@ -1,4 +1,4 @@
-@extends('UMViews::default')
+@extends('intothesource.usersmanager.default')
 
 
 @section('content')
@@ -6,7 +6,7 @@
     <h1>Update user</h1>
     <a href="{{ route('user.manager.index') }}" class="btn btn-danger">Back</a>
     <hr>    
-    @include('UMViews::errors')
+    @include('intothesource.usersmanager.errors')
     {!! Form::model($user, ['route' => ['user.manager.update', $user->id], 'class' => 'form', 'method' => 'PUT']) !!}
         <div class="form-group">
             {!! Form::label('name', 'Name') !!}

@@ -25,7 +25,7 @@ class UsersController extends Controller
     {
         $users = User::all();
         $deletedUsers = User::onlyTrashed()->get();
-        return view('users.index', compact('users', 'deletedUsers'));
+        return view('intothesource.usersmanager.users.index', compact('users', 'deletedUsers'));
     }
 
     /**
@@ -36,7 +36,7 @@ class UsersController extends Controller
     public function create()
     {
         $roles = Role::lists('name', 'id');
-        return view('users.create', compact('roles'));
+        return view('intothesource.usersmanager.users.create', compact('roles'));
     }
 
     /**
@@ -65,7 +65,7 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
         $roles = Role::lists('name', 'id');
-        return view('users.edit', compact('user', 'roles'));
+        return view('intothesource.usersmanager.users.edit', compact('user', 'roles'));
     }
 
     /**
