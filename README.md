@@ -57,7 +57,7 @@ php artisan db:seed
 ```
 
 ###### Or
-if you dont want to do that run the following commands:
+if you don't want to do that run the following commands:
 ```bash
 first: php artisan db:seed --class=RoleTableSeeder
 second: php artisan db:seed --class=RoleUserTableSeeder
