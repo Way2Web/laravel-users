@@ -23,6 +23,6 @@ class UserManager extends DefaultUserModel
      */
     public function roles()
     {
-        return $this->belongsToMany('App\Role', 'role_user', 'role_id', 'user_id')->withTimestamps();
+        return $this->belongsToMany('App\Role', 'role_user', 'user_id', 'role_id')->withTimestamps();
     }
 }
