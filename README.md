@@ -66,7 +66,7 @@ After that run the next command:
 php artisan db:seed
 ```
 
-###### Or
+####### Or
 if you don't want to do that run the following commands:
 ```bash
 first: php artisan db:seed --class=RoleTableSeeder
