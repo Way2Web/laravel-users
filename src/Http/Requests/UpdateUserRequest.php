@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\User;
+use App\UserManager;
 use App\Http\Requests\Request;
 
 /**
@@ -19,7 +19,12 @@ class UpdateUserRequest extends Request
      */
     public function authorize()
     {
-        return true;
+        $user = UserManager::findOrFail($this->route()->users);
+        if(in_array(config('intothesource.usermanager.middleware'), $user->roles->lists('name')->toArray())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -30,7 +35,7 @@ class UpdateUserRequest extends Request
     public function rules()
     {
         $id = $this->route()->users;
-        $user = User::findOrFail($id);
+        $user = UserManager::findOrFail($id);
         if(!$this->get('password'))
         {
             return [

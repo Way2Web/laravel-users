@@ -1,6 +1,6 @@
 <?php
 	return [
-			"message" => "Welcome to the Source Users Manager package",
+        "message" => "Welcome to the Source Users Manager package",
         
         /**
          * Multiple roles per user
@@ -15,5 +15,5 @@
         /**
          * Add all the roles that have access to the users table and role table
          */
-        'middleware' => ['checklogin', 'admin'],
+        'middleware' => ['checklogin', 'source', 'admin'],
 	];

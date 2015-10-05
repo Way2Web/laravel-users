@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\UserManager;
 use App\Http\Requests\Request;
 
 class CreateUserRequest extends Request
@@ -13,7 +14,12 @@ class CreateUserRequest extends Request
      */
     public function authorize()
     {
-        return true;
+        $user = UserManager::findOrFail($this->route()->users);
+        if(in_array(config('intothesource.usermanager.middleware'), $user->roles->lists('name')->toArray())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**

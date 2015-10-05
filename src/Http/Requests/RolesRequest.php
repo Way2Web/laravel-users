@@ -14,7 +14,12 @@ class RolesRequest extends Request
      */
     public function authorize()
     {
-        return true;
+        $user = UserManager::findOrFail(\Auth()->user()->id);
+        if(in_array(config('intothesource.usermanager.middleware'), $user->roles->lists('name')->toArray())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
