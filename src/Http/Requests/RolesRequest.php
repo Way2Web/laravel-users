@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Role;
+use App\UserManager;
 use App\Http\Requests\Request;
 
 class RolesRequest extends Request
