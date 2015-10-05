@@ -17,8 +17,8 @@ class RoleUserTableSeeder extends Seeder
         $source_role = Role::where('name', '=', 'source')->first();
         if($source && $source_role){
             DB::table('role_user')->insert([
-                'role_id' => $source->id,
-                'user_id' => $source_role->id,
+                'role_id' => $source_role->id,
+                'user_id' => $source->id,
                 'created_at' => date('c'),
                 'updated_at' => date('c')
             ]);
@@ -27,8 +27,8 @@ class RoleUserTableSeeder extends Seeder
         $admin_role = Role::where('name', '=', 'admin')->first();
         if($admin && $admin_role){
             DB::table('role_user')->insert([
-                'role_id' => $admin->id,
-                'user_id' => $admin_role->id,
+                'role_id' => $admin_role->id,
+                'user_id' => $admin->id,
                 'created_at' => date('c'),
                 'updated_at' => date('c')
             ]);
