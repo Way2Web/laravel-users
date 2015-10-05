@@ -5,7 +5,7 @@ namespace IntoTheSource\Users\Http\Middleware;
 use App\UserManager;
 use Closure;
 
-class IfAdminOrSource
+class IfSourceOrAdmin
 {
     /**
      * Handle an incoming request.

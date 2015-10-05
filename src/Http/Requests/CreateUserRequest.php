@@ -15,7 +15,7 @@ class CreateUserRequest extends Request
     public function authorize()
     {
         $user = UserManager::findOrFail($this->route()->users);
-        if(in_array(config('intothesource.usermanager.middleware'), $user->roles->lists('name')->toArray())) {
+        if(in_array('admin', $user->roles->lists('name')->toArray()) OR in_array('source', $user->roles->lists('name')->toArray())) {
             return true;
         } else {
             return false;
