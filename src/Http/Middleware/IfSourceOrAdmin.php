@@ -5,7 +5,7 @@ namespace IntoTheSource\Users\Http\Middleware;
 use App\UserManager;
 use Closure;
 
-class IfSource
+class IfAdminOrSource
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class IfSource
      */
     public function handle($request, Closure $next)
     {
-        if (UserManager::hasRoles('source')) {
+        if (UserManager::hasRoles(['admin']) OR UserManager::hasRoles(['source'])) {
             return $next($request);
         }
         $request->session()->flash('message', 'U heeft niet de juiste rechten om de gezochte pagina te bekijken.');

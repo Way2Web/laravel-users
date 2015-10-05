@@ -46,8 +46,7 @@ php artisan migrate
 Add the following lines to the '$routeMiddleware' array in the file 'App/Http/Kernel.php'
 
 ```bash
-'admin' => \IntoTheSource\Users\Http\Middleware\IfAdmin::class,
-'source' => \IntoTheSource\Users\Http\Middleware\IfSource::class,
+'sourceOrAdmin' => \IntoTheSource\Users\Http\Middleware\IfSourceOrAdmin::class,
 ```
 
 If you go to the user index you first need a role that sign in the [config file](https://github.com/intothesource/users/blob/master/src/config/intothesource.usermanager.php) at 'Middleware'

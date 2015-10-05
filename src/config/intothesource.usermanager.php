@@ -15,5 +15,5 @@
         /**
          * Add all the roles that have access to the users table and role table
          */
-        'middleware' => ['checklogin', 'source', 'admin'],
+        'middleware' => ['checklogin', 'sourceOrAdmin'],
 	];
