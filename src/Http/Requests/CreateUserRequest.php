@@ -14,7 +14,8 @@ class CreateUserRequest extends Request
      */
     public function authorize()
     {
-        $user = UserManager::findOrFail($this->route()->users);
+        $id = \Auth()->user()->id;
+        $user = UserManager::findOrFail($id);
         if(in_array('admin', $user->roles->lists('name')->toArray()) OR in_array('source', $user->roles->lists('name')->toArray())) {
             return true;
         } else {
