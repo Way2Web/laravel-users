@@ -3,7 +3,7 @@
     "description": "User manager with roles (single and multiple)",
     "keywords": ["user manager", "user managersystem", "user manager and roles", "the source", "thesource", "in to the source", "intothesource"],
     "homepage": "https://github.com/intothesource/users",
-    "license": "MIT",
+    "license": "BSD-2",
     "authors": [
         {
             "name": "Gertjan Roke",
