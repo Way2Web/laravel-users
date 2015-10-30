@@ -41,9 +41,11 @@
                             <?php $checked = 'checked' ?>
                         @endif
                     @endforeach
+                    @if($role != 'source' OR Auth()->user()->roles()->first()->name == 'source')
                     <label class="checkbox-inline">
                         <input type="checkbox" id="role{{$id}}" name="role[]" value="{{ $id }}" {{ $checked }}> {{ $role }}
                     </label>
+                    @endif
                 @endforeach
             @endif
         @else
@@ -53,14 +55,16 @@
                 @if($roles->count())
                 <optgroup label="All the available roles">
                     @foreach($roles as $id => $role)
-                        @if($user->roles()->count())
-                            @if($id == $user->roles()->first()->id)
-                                <option value="{{ $id }}" selected>{{ $role }}</option>
+                        @if($role != 'source' OR Auth()->user()->roles()->first()->name == 'source')
+                            @if($user->roles()->count())
+                                @if($id == $user->roles()->first()->id)
+                                    <option value="{{ $id }}" selected>{{ $role }}</option>
+                                @else
+                                    <option value="{{ $id }}">{{ $role }}</option>
+                                @endif
                             @else
                                 <option value="{{ $id }}">{{ $role }}</option>
                             @endif
-                        @else
-                            <option value="{{ $id }}">{{ $role }}</option>
                         @endif
                     @endforeach
                 </optgroup>

@@ -19,6 +19,13 @@
         </thead>
         <tbody>
             @foreach($users as $user)
+                @if(! Auth()->user()->hasRoles(['source']))
+                    @foreach($user->roles as $role)
+                        @if( in_array('source', $role->toArray()))
+                            <?php continue(2); ?>
+                        @endif
+                    @endforeach
+                @endif
             <tr>
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->name }}</td>

@@ -30,9 +30,11 @@
                 {!! Form::label('role', 'Roles') !!}
                 <br>
                 @foreach($roles as $id => $role)
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="role{{$id}}" name="role[]" value="{{ $id }}"> {{ $role }}
-                    </label>
+                    @if($role != 'source' OR Auth()->user()->hasRoles(['source']))
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="role{{$id}}" name="role[]" value="{{ $id }}"> {{ $role }}
+                        </label>
+                    @endif
                 @endforeach
             @endif
         @else
@@ -42,7 +44,9 @@
                 <optgroup label="All the available roles">
                 @if($roles->count())
                     @foreach($roles as $id => $role)
-                        <option value="{{ $id }}">{{ $role }}</option>
+                        @if($role != 'source' OR Auth()->user()->hasRoles(['source']))
+                            <option value="{{ $id }}">{{ $role }}</option>
+                        @endif
                     @endforeach
                 @endif
                 </optgroup>
