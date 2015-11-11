@@ -1,8 +1,8 @@
 {
-    "name": "intothesource/users",
+    "name": "intothesource/laravel-users",
     "description": "User manager with roles (single and multiple)",
-    "keywords": ["user manager", "user managersystem", "user manager and roles", "the source", "thesource", "in to the source", "intothesource"],
-    "homepage": "https://github.com/intothesource/users",
+    "keywords": ["laravel", "user manager", "user managersystem", "user manager and roles", "the source", "thesource", "in to the source", "intothesource"],
+    "homepage": "https://github.com/intothesource/laravel-users",
     "license": "BSD-2",
     "authors": [
         {
@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "intothesource/entrance" : "0.1.*",
+        "intothesource/laravel-entrance" : "0.1.*",
         "illuminate/html": "^5.0",
         "illuminate/support": "~5.1",
         "php" : ">=5.5.9"
