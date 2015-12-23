@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\User as DefaultUserModel;
 use App\UserManager as MeSelf;
 
-class UserManager extends DefaultUserModel
+class UserManager extends IntoTheSource\Entrance\Models\User
 {    
     use SoftDeletes;
 
