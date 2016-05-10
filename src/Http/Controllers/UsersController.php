@@ -5,8 +5,7 @@ namespace App\Http\Controllers\IntoTheSource\Users;
 use App\UserManager as User;
 use App\Role;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CreateUserRequest;
-use App\Http\Requests\updateUserRequest;
+use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 
 /**
@@ -42,10 +41,10 @@ class UsersController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  CreateUserRequest  $request
+     * @param  UserRequest  $request
      * @return Response
      */
-    public function store(CreateUserRequest $request)
+    public function store(UserRequest $request)
     {
         $user = new User;
         $request['password'] = bcrypt($request->get('password'));
@@ -71,11 +70,11 @@ class UsersController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
+     * @param  UserRequest  $request
      * @param  int  $id
      * @return Response
      */
-    public function update(UpdateUserRequest $request, $id)
+    public function update(UserRequest $request, $id)
     {
         $user = User::findOrFail($id);
         if($request->get('password') && ( bcrypt($request->get('old_password')) == $user->password)) {
