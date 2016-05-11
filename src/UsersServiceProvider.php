@@ -80,11 +80,6 @@ class UsersServiceProvider extends ServiceProvider
 	 */
 	public function setupRoutes(Router $router)
 	{
-		$router->group(['namespace' => 'App\Http\Controllers\IntoTheSource\Users'], function($router)
-		{
-			require __DIR__.'/Http/routes.php';
-		});
-        
         $routesFile = app_path().'/Http/routes.php';
 
         $currentRoutes = file_get_contents($routesFile);
