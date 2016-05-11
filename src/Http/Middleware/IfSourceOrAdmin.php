@@ -3,7 +3,6 @@
 namespace IntoTheSource\Users\Http\Middleware;
 
 use Config;
-use config('entrance.classes.user_model') as User;
 use Closure;
 
 class IfSourceOrAdmin
@@ -17,7 +16,8 @@ class IfSourceOrAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (UserManager::hasRoles(['admin']) OR UserManager::hasRoles(['source'])) {
+        $userModel = config('entrance.classes.user_model');
+        if ($userModel::hasRoles(['admin']) OR $userModel::hasRoles(['source'])) {
             return $next($request);
         }
         $request->session()->flash('message', 'U heeft niet de juiste rechten om de gezochte pagina te bekijken.');
