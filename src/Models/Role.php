@@ -28,6 +28,6 @@ class Role extends Model
      */
     public function users()
     {
-        return $this->belongsToMany('App\User', 'role_user', 'role_id', 'user_id')->withTimestamps();
+        return $this->belongsToMany(config('entrance.classes.user_model'), 'role_user', 'role_id', 'user_id')->withTimestamps();
     }
 }
