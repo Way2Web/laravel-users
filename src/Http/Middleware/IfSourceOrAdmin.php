@@ -2,7 +2,8 @@
 
 namespace IntoTheSource\Users\Http\Middleware;
 
-use App\UserManager;
+use Config;
+use config('entrance.classes.user_model') as User;
 use Closure;
 
 class IfSourceOrAdmin
