@@ -12,6 +12,7 @@
          * @string
          */
         'default_role' => 'admin',
+        'default_role_model' => 'App\Role',
 
         /**
          * Prefix your url (The route would look something like this 'cms/users')
