@@ -1,9 +1,8 @@
 {
-    "name": "intothesource/laravel-users",
+    "name": "way2web/laravel-users",
     "description": "User manager with roles (single and multiple)",
-    "keywords": ["laravel", "user manager", "user managersystem", "user manager and roles", "the source", "thesource", "in to the source", "intothesource"],
-    "homepage": "https://github.com/intothesource/laravel-users",
-    "license": "BSD-2",
+    "keywords": ["laravel", "user manager", "user managersystem", "user manager and roles"],
+    "homepage": "https://github.com/Way2Web/laravel-entrance.git",
     "authors": [
         {
             "name": "Gertjan Roke",
@@ -13,22 +12,22 @@
         }
     ],
     "require": {
-        "intothesource/entrance" : "1.*",
+        "way2web/laravel-entrance" : "dev-feature/FSCAPP-35",
         "laravelcollective/html": "~5.0",
         "php" : ">=5.5.9"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*",
-        "scrutinizer/ocular": "~1.1"
+        "scrutinizer/ocular": "~1.6"
     },
     "autoload": {
         "psr-4": {
-            "IntoTheSource\\Users\\": "src"
+            "Way2Web\\Users\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IntoTheSource\\Users\\Test\\": "tests"
+            "Way2Web\\Users\\Test\\": "tests"
         }
     },
     "scripts": {
