@@ -1,6 +1,6 @@
 <?php
 
-namespace IntoTheSource\Users;
+namespace Way2Web\Users;
 
 class SkeletonClass
 {

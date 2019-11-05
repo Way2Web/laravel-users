@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\IntoTheSource\Users;
+namespace App\Http\Controllers\Way2Web\Users;
 
 use App\UserManager as User;
 use App\Role;

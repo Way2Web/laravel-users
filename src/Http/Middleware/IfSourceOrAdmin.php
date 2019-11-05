@@ -1,6 +1,6 @@
 <?php
 
-namespace IntoTheSource\Users\Http\Middleware;
+namespace Way2Web\Users\Http\Middleware;
 
 use Config;
 use Closure;

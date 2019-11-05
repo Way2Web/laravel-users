@@ -1,6 +1,6 @@
 <?php
 
-namespace IntoTheSource\Users\Models;
+namespace Way2Web\Users\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

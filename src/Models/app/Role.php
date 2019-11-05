@@ -2,7 +2,7 @@
 
 namespace App;
 
-use IntoTheSource\Users\Models\Role as UserManagerRole;
+use Way2Web\Users\Models\Role as UserManagerRole;
 
 class Role extends UserManagerRole
 {
