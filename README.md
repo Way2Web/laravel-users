@@ -3,7 +3,7 @@ User manager with roles (single and multiple)
 
 ## Install
 ```bash
-composer require way2web/users
+composer require way2web/laravel-users
 ```
 
 This package also uses the [Entrance package](https://github.com/Way2Web/laravel-entrance), for more information about that package go to that repository.
