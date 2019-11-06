@@ -2,13 +2,19 @@
     "name": "way2web/laravel-users",
     "description": "User manager with roles (single and multiple)",
     "keywords": ["laravel", "user manager", "user managersystem", "user manager and roles"],
-    "homepage": "https://github.com/Way2Web/laravel-entrance.git",
+    "homepage": "https://github.com/Way2Web/laravel-users.git",
     "authors": [
         {
             "name": "Gertjan Roke",
             "email": "gjroke@intothesource.com",
             "homepage": "http://wwww.intothesource.com",
             "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/way2web/laravel-entrance"
         }
     ],
     "require": {
