@@ -18,7 +18,7 @@
         }
     ],
     "require": {
-        "way2web/laravel-entrance" : "dev-feature/FSCAPP-35",
+        "way2web/laravel-entrance" : "dev-master",
         "laravelcollective/html": "~5.0",
         "php" : ">=7.0"
     },
