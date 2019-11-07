@@ -3,7 +3,7 @@
 namespace Way2Web\Users;
 
 /**
- * 
+ *
  * @author Gertjan Roke <gjroke@intothesource.com>
  */
 
@@ -80,7 +80,7 @@ class UsersServiceProvider extends ServiceProvider
 	 */
 	public function setupRoutes(Router $router)
 	{
-        $routesFile = app_path().'/Http/routes.php';
+        $routesFile = base_path() . '/routes/web.php';
 
         $currentRoutes = file_get_contents($routesFile);
 
